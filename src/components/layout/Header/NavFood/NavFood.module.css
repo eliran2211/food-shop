@@ -1,0 +1,22 @@
+.nav-food {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.food-items {
+  display: flex;
+  column-gap: 90px;
+}
+
+.food-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.svg-food-item {
+  height: 4rem;
+}

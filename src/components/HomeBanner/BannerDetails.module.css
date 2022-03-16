@@ -1,0 +1,33 @@
+.details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  color: white;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.details p {
+  font-family: "Dosis", sans-serif;
+  font-style: italic;
+  font-size: 25px;
+}
+
+.details h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.details a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: medium;
+  color: white;
+  border-bottom: 2px dashed white;
+  text-decoration: none;
+}
+
+.details a:hover {
+  opacity: 0.7;
+}

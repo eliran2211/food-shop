@@ -1,0 +1,48 @@
+.list-item {
+  z-index: 10;
+  position: absolute;
+  background-color: #1c2330;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  list-style-type: none;
+  top: 3rem;
+  justify-content: space-around;
+  width: 7rem;
+  background-color: #1c2330;
+  padding: 7px;
+  transition: opacity 1s linear;
+}
+
+.content-enter-active {
+  animation: contentOpen 300ms ease-out forwards;
+}
+
+.content-exit-active {
+  animation: contentClose 300ms ease-out forwards;
+}
+
+@keyframes contentOpen {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes contentClose {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}

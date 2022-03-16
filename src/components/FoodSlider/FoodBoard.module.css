@@ -1,0 +1,14 @@
+.food-board {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.slides {
+  transition: transform 600ms ease-out;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

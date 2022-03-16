@@ -1,0 +1,36 @@
+.recommended-section {
+  display: flex;
+  justify-content: center;
+  column-gap: 10rem;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 25rem;
+  height: 30rem;
+}
+
+.louise-img {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+}
+
+.louise-food {
+  position: absolute;
+  height: 20rem;
+  left: -40%;
+  bottom: -20%;
+}
+
+.image-container h1 {
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 0;
+}

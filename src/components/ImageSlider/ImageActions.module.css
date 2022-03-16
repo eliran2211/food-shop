@@ -1,0 +1,50 @@
+.actions {
+  position: absolute;
+  display: flex;
+  top: 43%;
+  flex-direction: row;
+  height: fit-content;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.right-action {
+  height: 2rem;
+  fill: rgba(173, 169, 169, 0.192);
+}
+
+.left-action {
+  height: 2rem;
+  fill: rgba(173, 169, 169, 0.192);
+}
+
+.image-slider-exit-active {
+  animation: hideActions 500ms linear forwards;
+}
+
+.image-slider-exit {
+  opacity: 0;
+}
+
+.image-slider-enter-active {
+  animation: showActions 700ms linear forwards;
+}
+
+.image-slider-enter {
+  opacity: 1;
+}
+
+@keyframes hideActions {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showActions {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

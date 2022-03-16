@@ -1,0 +1,58 @@
+.details {
+  top: 3rem;
+  left: 200px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  align-items: center;
+  text-align: center;
+  width: 15rem;
+  height: 25rem;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.details h1 {
+  opacity: 0;
+  color: white;
+  font-size: 75px;
+}
+
+.svg-icon {
+  opacity: 0;
+  fill: white;
+  height: 7rem;
+}
+
+.button {
+  opacity: 0;
+}
+
+.details-exit-active {
+  animation: closeDetails 1s linear forwards;
+}
+
+.details-exit {
+  opacity: 0;
+}
+
+@keyframes openDetails {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeDetails {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
