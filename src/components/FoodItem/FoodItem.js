@@ -1,4 +1,4 @@
-import { ReactComponent as CartSvg } from "../../assets/shopping-cart-svg.svg";
+import { ReactComponent as CartSvg } from "../../assets/navigation/navigation-bar/shopping-cart.svg";
 
 import classes from "./FoodItem.module.css";
 import ButtonSlide from "../UI/ButtonSlide/ButtonSlide";

@@ -1,12 +1,12 @@
 import classes from "./Header.module.css";
-import NavBar from "./NavBar/NavBar";
-import NavFood from "./NavFood/NavFood";
+import NavigationBar from "./NavigationBar/NavigationBar";
+import NavigationFood from "./NavigationFood/NavigationFood";
 
 function Header() {
   return (
     <div className={classes.header}>
-      <NavBar />
-      <NavFood />
+      <NavigationBar />
+      <NavigationFood />
     </div>
   );
 }

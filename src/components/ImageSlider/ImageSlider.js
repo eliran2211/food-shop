@@ -2,15 +2,14 @@ import classes from "./ImageSlider.module.css";
 import { useState } from "react";
 import SliderBoard from "./SliderBoard";
 import ImageActions from "./ImageActions";
-import useSlider from "../../hooks/use-slider";
 
 import pizzaImg from "../../assets/image-slide/pizza.jpg";
 import burgerImg from "../../assets/image-slide/burger.jpg";
 import sushiImg from "../../assets/image-slide/sushi.jpg";
 
-import { ReactComponent as SvgPizza } from "../../assets/pizza-svg.svg";
-import { ReactComponent as SvgBurger } from "../../assets/burger-svg.svg";
-import { ReactComponent as SvgSushi } from "../../assets/sushi-svg.svg";
+import { ReactComponent as SvgPizza } from "../../assets/navigation/navigation-food/pizza-svg.svg";
+import { ReactComponent as SvgBurger } from "../../assets/navigation/navigation-food/burger-svg.svg";
+import { ReactComponent as SvgSushi } from "../../assets/navigation/navigation-food/sushi-svg.svg";
 
 const images = [
   { id: "burger-slider", src: burgerImg, title: "Burger", svg: SvgBurger },
