@@ -36,10 +36,14 @@
   width: 25px;
 }
 
+.actions {
+  display: flex;
+  column-gap: 2rem;
+}
+
 .login {
   display: flex;
   height: 100%;
-  width: 5rem;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
@@ -50,4 +54,5 @@
 .login-svg {
   fill: white;
   width: 25px;
+  height: 20px;
 }

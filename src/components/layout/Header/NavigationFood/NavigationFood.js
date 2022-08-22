@@ -8,6 +8,8 @@ import { ReactComponent as PizzaSvg } from "../../../../assets/navigation/naviga
 import { ReactComponent as SteakSvg } from "../../../../assets/navigation/navigation-food/steak-svg.svg";
 import { ReactComponent as SushiSvg } from "../../../../assets/navigation/navigation-food/sushi-svg.svg";
 import { ReactComponent as NoodlesSvg } from "../../../../assets/navigation/navigation-food/noodles-svg.svg";
+import { ReactComponent as Logo } from "../../../../assets/logo-food.svg";
+import { NavLink } from "react-router-dom";
 
 const foodItems = [
   {
@@ -58,7 +60,7 @@ const NavigationFood = () => {
   const items = foodItems.map((foodItem) => {
     const Svg = foodItem.svgElement;
     return (
-      <NavItem key={foodItem.id}>
+      <NavItem key={foodItem.id} href={foodItem.href}>
         <div className={classes["food-item"]}>
           <Svg className={classes["food-svg"]} />
           <p>{foodItem.title}</p>
@@ -68,6 +70,9 @@ const NavigationFood = () => {
   });
   return (
     <div className={classes["nav-food"]}>
+      <NavLink to="/" className={classes["nav-logo"]}>
+        <Logo className={classes["logo"]}></Logo>
+      </NavLink>
       <div className={classes["food-items"]}>{items}</div>
     </div>
   );

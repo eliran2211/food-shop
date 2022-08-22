@@ -12,7 +12,7 @@ const animateFadeIn = (i) =>
   }ms forwards`;
 
 function SliderDetails(props) {
-  const { Svg, title } = props;
+  const { Svg, title, style } = props;
   const svgAnimation = { animation: animateFadeIn(0) };
   const titleAnimation = { animation: animateFadeIn(1) };
   const btnAnimation = { animation: animateFadeIn(2) };
@@ -26,9 +26,9 @@ function SliderDetails(props) {
         exitDone: classes["details-exit"],
       }}
     >
-      <div className={classes["details"]}>
+      <div className={classes["details"]} style={style}>
         <Svg className={classes["svg-icon"]} style={svgAnimation} />
-        <h1 style={titleAnimation}>{title}</h1>
+        <p style={titleAnimation}>{title}</p>
         <ButtonSlide style={btnAnimation} btnClasses={classes["button"]}>
           ORDER NOW
         </ButtonSlide>

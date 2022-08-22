@@ -1,28 +1,30 @@
 .details {
-  top: 3rem;
-  left: 200px;
+  top: 8rem;
   position: absolute;
   display: flex;
   flex-direction: column;
-  row-gap: 5rem;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   width: 15rem;
-  height: 25rem;
   z-index: 10;
+  height: 23rem;
   background-color: transparent;
 }
 
-.details h1 {
+.details p {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
   opacity: 0;
   color: white;
-  font-size: 75px;
+  font-size: 80px;
 }
 
 .svg-icon {
   opacity: 0;
   fill: white;
-  height: 7rem;
+  height: 8rem;
+  width: 8rem;
 }
 
 .button {

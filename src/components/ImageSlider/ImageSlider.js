@@ -12,9 +12,24 @@ import { ReactComponent as SvgBurger } from "../../assets/navigation/navigation-
 import { ReactComponent as SvgSushi } from "../../assets/navigation/navigation-food/sushi-svg.svg";
 
 const images = [
-  { id: "burger-slider", src: burgerImg, title: "Burger", svg: SvgBurger },
-  { id: "sushi-slider", src: sushiImg, title: "Sushi", svg: SvgSushi },
-  { id: "pizza-slider", src: pizzaImg, title: "Pizza", svg: SvgPizza },
+  {
+    id: "burger-slider",
+    src: burgerImg,
+    title: "Burger",
+    imageDetails: { svg: SvgBurger, style: { left: "10rem" } },
+  },
+  {
+    id: "sushi-slider",
+    src: sushiImg,
+    title: "Sushi",
+    imageDetails: { svg: SvgSushi, style: { left: "10rem" } },
+  },
+  {
+    id: "pizza-slider",
+    src: pizzaImg,
+    title: "Pizza",
+    imageDetails: { svg: SvgPizza, style: { right: "10rem" } },
+  },
 ];
 
 function ImageSlider() {

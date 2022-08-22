@@ -3,6 +3,7 @@ import classes from "./NavigationBar.module.css";
 import NavItem from "./NavItem";
 import { ReactComponent as PhoneSvg } from "../../../../assets/navigation/navigation-bar/phone-contact.svg";
 import { ReactComponent as LoginSvg } from "../../../../assets/navigation/navigation-bar/login-svg.svg";
+import Cart from "../../../CartShopping/Cart";
 
 const navItems = [
   {
@@ -44,14 +45,18 @@ const NavigationBar = () => {
       <div className={classes["contact"]}>
         <PhoneSvg className={classes["contact-svg"]} />
         <p>+1 (800) 312-2121</p>
-        <NavItem>Contact Us</NavItem>
+        <NavItem href="#">Contact Us</NavItem>
       </div>
-      <NavItem>
-        <div className={classes["login"]}>
-          <LoginSvg className={classes["login-svg"]} />
-          <p>Login</p>
-        </div>
-      </NavItem>
+
+      <div className={classes["actions"]}>
+        <NavItem href="/login">
+          <div className={classes["login"]}>
+            <LoginSvg className={classes["login-svg"]} />
+            <p>Login</p>
+          </div>
+        </NavItem>
+        <Cart />
+      </div>
     </div>
   );
 };

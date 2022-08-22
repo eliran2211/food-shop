@@ -31,9 +31,10 @@ function SliderBoard(props) {
     //true - will fire onEnter and onEntered
     <Fragment>
       <SliderDetails
+        style={images[currImage].imageDetails.style}
         show={activate}
         title={images[currImage].title}
-        Svg={images[currImage].svg}
+        Svg={images[currImage].imageDetails.svg}
       />
       <div
         onMouseEnter={props.onEnter}
