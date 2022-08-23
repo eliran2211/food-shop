@@ -3,11 +3,11 @@ import ButtonSlide from '../../UI/ButtonSlide/ButtonSlide';
 
 import { CSSTransition } from 'react-transition-group';
 
-const durationFadeIn = 600;
-const delayFadeIn = 500;
-
-const animateFadeIn = (i) =>
-  `${classes['openDetails']} ${durationFadeIn}ms forwards`;
+const animateFadeIn = (i) => {
+  const durationFadeIn = 600;
+  const delayFadeIn = 500;
+  return `${classes['openDetails']} ${durationFadeIn}ms forwards`;
+};
 
 function SliderDetails(props) {
   const { Svg, title, style } = props;
