@@ -1,0 +1,60 @@
+.details {
+  top: 8rem;
+  position: absolute;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 15rem;
+  z-index: 10;
+  height: 23rem;
+  background-color: transparent;
+}
+
+.details p {
+  font-family: 'Roboto', sans-serif;
+  height: fit-content;
+  opacity: 0;
+  color: white;
+  font-size: 80px;
+}
+
+.svg-icon {
+  opacity: 0;
+  fill: white;
+  height: 8rem;
+  width: 8rem;
+}
+
+.button {
+  opacity: 0;
+}
+
+.details-exit-active {
+  animation: closeDetails 1s linear forwards;
+}
+
+.details-exit {
+  opacity: 0;
+}
+
+@keyframes openDetails {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeDetails {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

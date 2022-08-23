@@ -1,4 +1,4 @@
-import classes from './SliderDetails.module.css';
+import './SliderDetails.css';
 import ButtonSlide from '../../UI/ButtonSlide/ButtonSlide';
 
 import { CSSTransition } from 'react-transition-group';
@@ -6,7 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 const animateFadeIn = (i) => {
   const durationFadeIn = 600;
   const delayFadeIn = 500;
-  return `${classes['openDetails']} ${durationFadeIn}ms forwards`;
+  return `${'openDetails'} ${durationFadeIn}ms forwards`;
 };
 
 function SliderDetails(props) {
@@ -26,14 +26,14 @@ function SliderDetails(props) {
       in={props.show}
       timeout={1000}
       classNames={{
-        exit: classes['details-exit-active'],
-        exitDone: classes['details-exit'],
+        exit: 'details-exit-active',
+        exitDone: 'details-exit',
       }}
     >
-      <div className={classes['details']} style={style}>
-        <Svg className={classes['svg-icon']} style={svgAnimation} />
+      <div className={'details'} style={style}>
+        <Svg className={'svg-icon'} style={svgAnimation} />
         <p style={titleAnimation}>{title}</p>
-        <ButtonSlide style={btnAnimation} btnClasses={classes['button']}>
+        <ButtonSlide style={btnAnimation} btnClasses={'button'}>
           ORDER NOW
         </ButtonSlide>
       </div>
