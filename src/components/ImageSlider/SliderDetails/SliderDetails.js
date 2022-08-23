@@ -26,10 +26,12 @@ function SliderDetails(props) {
         exitDone: classes['details-exit'],
       }}
     >
-      <div className={classes['details']}>
-        <Svg className={classes['svg-icon']} />
+      <div className={classes['details']} style={style}>
+        <Svg className={classes['svg-icon']} style={svgAnimation} />
         <p style={titleAnimation}>{title}</p>
-        <ButtonSlide btnClasses={classes['button']}>ORDER NOW</ButtonSlide>
+        <ButtonSlide style={btnAnimation} btnClasses={classes['button']}>
+          ORDER NOW
+        </ButtonSlide>
       </div>
     </CSSTransition>
   );
