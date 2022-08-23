@@ -7,15 +7,19 @@ const durationFadeIn = 600;
 const delayFadeIn = 500;
 
 const animateFadeIn = (i) =>
-  `${classes['openDetails']} ${durationFadeIn}ms ease-out ${
-    delayFadeIn * i
-  }ms forwards`;
+  `${classes['openDetails']} ${durationFadeIn}ms forwards`;
 
 function SliderDetails(props) {
   const { Svg, title, style } = props;
-  const svgAnimation = { animation: animateFadeIn(0) };
-  const titleAnimation = { animation: animateFadeIn(1) };
-  const btnAnimation = { animation: animateFadeIn(2) };
+  const svgAnimation = { animation: animateFadeIn(0), animationDelay: '0' };
+  const titleAnimation = {
+    animation: animateFadeIn(1),
+    animationDelay: '1000ms',
+  };
+  const btnAnimation = {
+    animation: animateFadeIn(2),
+    animationDelay: '2000ms',
+  };
   return (
     <CSSTransition
       unmountOnExit

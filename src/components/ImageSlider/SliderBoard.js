@@ -1,8 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
-import classes from "./SliderBoard.module.css";
-import { CSSTransition } from "react-transition-group";
+import { Fragment, useEffect, useState } from 'react';
+import classes from './SliderBoard.module.css';
+import { CSSTransition } from 'react-transition-group';
 
-import SliderDetails from "./SliderDetails/SliderDetails";
+import SliderDetails from './SliderDetails/SliderDetails';
 
 function SliderBoard(props) {
   const [init, setInit] = useState(true);
@@ -13,7 +13,7 @@ function SliderBoard(props) {
 
   const image = (
     <img
-      className={classes["image"]}
+      className={classes['image']}
       src={images[currImage].src}
       alt={images[currImage].src}
     />
@@ -39,7 +39,7 @@ function SliderBoard(props) {
       <div
         onMouseEnter={props.onEnter}
         onMouseLeave={props.onLeave}
-        className={classes["slider"]}
+        className={classes['slider']}
       >
         <CSSTransition
           unmountOnExit
@@ -49,10 +49,10 @@ function SliderBoard(props) {
             exit: 1000,
           }}
           classNames={{
-            enterActive: classes["slide-enter-active"],
-            enterDone: classes["slide-enter"],
-            exitActive: classes["slide-exit-active"],
-            exitDone: classes["slide-exit"],
+            enterActive: classes['slide-enter-active'],
+            enterDone: classes['slide-enter'],
+            exitActive: classes['slide-exit-active'],
+            exitDone: classes['slide-exit'],
           }}
           onExited={() => {
             setCurrImage(props.position);
