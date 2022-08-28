@@ -1,34 +1,34 @@
-import classes from "./ImageSlider.module.css";
-import { useState } from "react";
-import SliderBoard from "./SliderBoard";
-import ImageActions from "./ImageActions";
+import classes from './ImageSlider.module.css';
+import { useState } from 'react';
+import SliderBoard from './SliderBoard';
+import ImageActions from './ImageActions';
 
-import pizzaImg from "../../assets/image-slide/pizza.jpg";
-import burgerImg from "../../assets/image-slide/burger.jpg";
-import sushiImg from "../../assets/image-slide/sushi.jpg";
+import pizzaImg from '../../assets/image-slide/pizza.jpg';
+import burgerImg from '../../assets/image-slide/burger.jpg';
+import sushiImg from '../../assets/image-slide/sushi.jpg';
 
-import { ReactComponent as SvgPizza } from "../../assets/navigation/navigation-food/pizza-svg.svg";
-import { ReactComponent as SvgBurger } from "../../assets/navigation/navigation-food/burger-svg.svg";
-import { ReactComponent as SvgSushi } from "../../assets/navigation/navigation-food/sushi-svg.svg";
+import { ReactComponent as SvgPizza } from '../../assets/navigation/navigation-food/pizza-svg.svg';
+import { ReactComponent as SvgBurger } from '../../assets/navigation/navigation-food/burger-svg.svg';
+import { ReactComponent as SvgSushi } from '../../assets/navigation/navigation-food/sushi-svg.svg';
 
 const images = [
   {
-    id: "burger-slider",
+    id: 'burger-slider',
     src: burgerImg,
-    title: "Burger",
-    imageDetails: { svg: SvgBurger, style: { left: "10rem" } },
+    title: 'Burger',
+    imageDetails: { svg: SvgBurger, style: { left: '10rem' } },
   },
   {
-    id: "sushi-slider",
+    id: 'sushi-slider',
     src: sushiImg,
-    title: "Sushi",
-    imageDetails: { svg: SvgSushi, style: { left: "10rem" } },
+    title: 'Sushi',
+    imageDetails: { svg: SvgSushi, style: { left: '10rem' } },
   },
   {
-    id: "pizza-slider",
+    id: 'pizza-slider',
     src: pizzaImg,
-    title: "Pizza",
-    imageDetails: { svg: SvgPizza, style: { right: "10rem" } },
+    title: 'Pizza',
+    imageDetails: { svg: SvgPizza, style: { right: '10rem' } },
   },
 ];
 
@@ -44,9 +44,8 @@ function ImageSlider() {
     if (currImage === 0) return setCurrImage(images.length - 1);
     setCurrImage((currImage - 1) % images.length);
   };
-
   return (
-    <div className={classes["main-slider"]}>
+    <div className={classes['main-slider']}>
       <SliderBoard
         onEnter={() => setIsHoverSlide(true)}
         onLeave={() => setIsHoverSlide(false)}

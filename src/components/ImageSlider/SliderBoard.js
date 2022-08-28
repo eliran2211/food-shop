@@ -1,3 +1,4 @@
+import React from 'react';
 import { Fragment, useEffect, useState } from 'react';
 import classes from './SliderBoard.module.css';
 import { CSSTransition } from 'react-transition-group';
@@ -19,8 +20,9 @@ function SliderBoard(props) {
     />
   );
 
-  useEffect(() => setInit(false), []);
-
+  useEffect(() => {
+    setInit(false);
+  }, []);
   useEffect(() => {
     if (!init) {
       setActivate(false);
@@ -54,8 +56,10 @@ function SliderBoard(props) {
             exitActive: classes['slide-exit-active'],
             exitDone: classes['slide-exit'],
           }}
-          onExited={() => {
+          onEnter={() => {
             setCurrImage(props.position);
+          }}
+          onExited={() => {
             setActivate(true);
           }}
         >
@@ -66,4 +70,8 @@ function SliderBoard(props) {
   );
 }
 
-export default SliderBoard;
+const areEqual = (prevProps, nextProps) => {
+  return prevProps.position === nextProps.position;
+};
+
+export default React.memo(SliderBoard, areEqual);
